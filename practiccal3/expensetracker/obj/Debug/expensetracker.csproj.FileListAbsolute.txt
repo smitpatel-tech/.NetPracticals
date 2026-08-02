@@ -1,0 +1,7 @@
+C:\Users\smit\source\repos\expensetracker\expensetracker\obj\Debug\expensetracker.csproj.AssemblyReference.cache
+C:\Users\smit\source\repos\expensetracker\expensetracker\obj\Debug\expensetracker.csproj.CoreCompileInputs.cache
+C:\Users\smit\source\repos\expensetracker\expensetracker\bin\Debug\expensetracker.exe.config
+C:\Users\smit\source\repos\expensetracker\expensetracker\bin\Debug\expensetracker.exe
+C:\Users\smit\source\repos\expensetracker\expensetracker\bin\Debug\expensetracker.pdb
+C:\Users\smit\source\repos\expensetracker\expensetracker\obj\Debug\expensetracker.exe
+C:\Users\smit\source\repos\expensetracker\expensetracker\obj\Debug\expensetracker.pdb
