@@ -1,0 +1,42 @@
+﻿@model List<StoreInventorySystem.Models.Item>
+
+@{
+    ViewBag.Title = "Catalog Index";
+    Layout = null;
+}
+
+<body style="background-color: #EBF3F9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="padding: 20px;">
+        <h4 style="color: #333;">Inventory Management Portal</h4>
+
+        <h2 style="border-bottom: 2px solid #007ACC; padding-bottom: 5px; color: #004080;">Product Inventory</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; background-color: #ffffff; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <thead>
+                <tr style="background-color: #007ACC; color: white; text-align: left;">
+                    <th>Item ID</th>
+                    <th>Title</th>
+                    <th>Details</th>
+                    <th>Cost (INR)</th>
+                    <th>Section</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var entry in Model)
+                {
+                    <tr>
+                        <td>@entry.Id</td>
+                        <td>@entry.Title</td>
+                        <td>@entry.Details</td>
+                        <td>@entry.Cost</td>
+                        <td>@entry.Section</td>
+                        <td>
+                            @Html.ActionLink("View Info", "Details", "Catalog", new { id = entry.Id }, new { @style = "color: #007ACC; text-decoration: none; font-weight: bold;" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

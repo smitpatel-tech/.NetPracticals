@@ -1,0 +1,31 @@
+﻿@model StoreInventorySystem.Models.Item
+
+@{
+    ViewBag.Title = "Item Details";
+    Layout = null;
+}
+
+<body style="background-color: #EBF3F9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="padding: 20px;">
+        <h2 style="border-bottom: 2px solid #007ACC; padding-bottom: 5px; color: #004080;">Item Specification</h2>
+
+        @if (Model != null)
+        {
+            <div style="background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 400px;">
+                <p><strong>Item ID:</strong> @Model.Id</p>
+                <p><strong>Title:</strong> @Model.Title</p>
+                <p><strong>Details:</strong> @Model.Details</p>
+                <p><strong>Cost:</strong> @Model.Cost</p>
+                <p><strong>Section:</strong> @Model.Section</p>
+            </div>
+        }
+        else
+        {
+            <p style="color: red; font-weight: bold;">Requested item could not be located.</p>
+        }
+
+        <br />
+
+        @Html.ActionLink("← Return to Catalog", "Index", "Catalog", null, new { @style = "color: #007ACC; text-decoration: none; font-weight: bold;" })
+    </div>
+</body>
