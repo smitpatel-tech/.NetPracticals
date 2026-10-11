@@ -1,0 +1,38 @@
+﻿@model List<CampusFeedbackHub.Models.ReviewModel>
+
+@{
+    ViewBag.Title = "Submission History";
+}
+
+<div>
+    <h2 style="color: #34495e;">Submitted Course Reviews</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; background: #fff;">
+        <tr style="background-color: #34495e; color: white;">
+            <th>Reg. Number</th>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Score</th>
+            <th>Remarks</th>
+        </tr>
+
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.StudentRegistrationNo</td>
+                <td>@record.FullName</td>
+                <td>@record.CourseTitle</td>
+                <td>@record.Stars / 5</td>
+                <td>@record.FeedbackNotes</td>
+            </tr>
+        }
+    </table>
+
+    <br />
+    <p>
+        @Html.ActionLink("+ Submit Another Evaluation", "NewReview", "Review", null, new { @style = "color: #2980b9; text-decoration: none; font-weight: bold;" })
+    </p>
+    <p>
+        @Html.ActionLink("← Back to Portal Home", "Index", "Review", null, new { @style = "color: #2980b9; text-decoration: none;" })
+    </p>
+</div>

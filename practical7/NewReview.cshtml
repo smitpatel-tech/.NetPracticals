@@ -1,0 +1,45 @@
+﻿@model CampusFeedbackHub.Models.ReviewModel
+
+@{
+    ViewBag.Title = "Submit Evaluation";
+}
+
+<div>
+    @Html.Partial("_NoticePartial")
+    <h2 style="color: #34495e;">Course Evaluation Form</h2>
+
+    @using (Html.BeginForm())
+    {
+        <table cellpadding="6" style="width: 100%; max-width: 600px;">
+            <tr>
+                <td>@Html.LabelFor(m => m.StudentRegistrationNo, "Registration Number")</td>
+                <td>@Html.EditorFor(m => m.StudentRegistrationNo)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.FullName, "Full Name")</td>
+                <td>@Html.TextBoxFor(m => m.FullName, new { style = "padding: 5px; width: 100%;" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.CourseTitle, "Course Title")</td>
+                <td>@Html.TextBoxFor(m => m.CourseTitle, new { style = "padding: 5px; width: 100%;" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.Stars, "Rating (1-5)")</td>
+                <td>@Html.TextBoxFor(m => m.Stars, new { type = "number", min = "1", max = "5", style = "padding: 5px; width: 100%;" })</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.FeedbackNotes, "Comments / Remarks")</td>
+                <td>@Html.TextAreaFor(m => m.FeedbackNotes, 4, 30, new { style = "padding: 5px; width: 100%;" })</td>
+            </tr>
+        </table>
+
+        <div style="margin-top: 15px;">
+            <input type="submit" value="Save Evaluation" style="background-color: #27ae60; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;" />
+        </div>
+
+        <br />
+        <p>
+            @Html.ActionLink("← Return to Portal Home", "Index", "Review", null, new { @style = "color: #2980b9; text-decoration: none;" })
+        </p>
+    }
+</div>

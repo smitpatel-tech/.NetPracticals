@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Home Portal";
+}
+
+<div>
+    @Html.Partial("_NoticePartial")
+
+    <div style="margin-top: 20px;">
+        <p>@Html.ActionLink("Submit New Review", "NewReview", "Review", null, new { @style = "font-size: 1.1em; color: #2980b9; text-decoration: none; font-weight: bold;" })</p>
+        <p>@Html.ActionLink("View All Submissions", "History", "Review", null, new { @style = "font-size: 1.1em; color: #2980b9; text-decoration: none; font-weight: bold;" })</p>
+    </div>
+</div>
